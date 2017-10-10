@@ -12,7 +12,7 @@ export default class HomeConditionalScreen extends React.Component {
   }
 
   static navigationOptions = {
-    title: false ? 'Home' : 'Welcome',
+    title: false ? 'Home' : 'Welcome', // temp setting while awaiting auth & redux
     // title: this.props.isLoggedIn ? 'Home' : 'Welcome',
   };
 

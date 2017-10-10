@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import styles from '../styles/styles'
+import styles from '../../styles/styles'
 
 export default class ChatScreen extends React.Component {
   static navigationOptions = ({navigation}) => ({
