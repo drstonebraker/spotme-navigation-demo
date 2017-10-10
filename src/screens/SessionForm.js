@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Button } from 'react-native'
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import { NavigationActions } from 'react-navigation'
 
 import styles from '../styles/styles'
 
@@ -22,7 +23,14 @@ export default class SessionFormScreen extends React.Component {
   }
 
   render() {
-    const { navigate } = this.props.navigation;
+    const resetNavigateHome = NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({ routeName: 'Home' })
+      ]
+    })
+    const { dispatch } = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <FormLabel>Username</FormLabel>
@@ -32,7 +40,7 @@ export default class SessionFormScreen extends React.Component {
         <FormInput onChangeText={this._handleChange('password')}/>
         <FormValidationMessage>Error message</FormValidationMessage>
         <Button
-          onPress={() => {}}
+          onPress={() => dispatch(resetNavigateHome)}
           title='Submit' />
       </View>
     )
