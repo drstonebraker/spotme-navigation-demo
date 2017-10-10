@@ -7,7 +7,7 @@ import MainScreenNavigator from '../navigators/MainScreen'
 class NavigatorWrappingScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.screen}>
         <Text>YOLO</Text>
         <MainScreenNavigator navigation={this.props.navigation}/>
       </View>

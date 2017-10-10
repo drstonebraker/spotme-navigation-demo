@@ -14,8 +14,18 @@ export default class SessionFormScreen extends React.Component {
       password: ''
     }
 
-
     this._handleChange = this._handleChange.bind(this)
+  }
+
+  static navigationOptions = ({navigation}) => {
+    switch (navigation.state.params.formType) {
+      case 'logIn':
+        return { title: 'Log In' }
+      case 'signUp':
+        return { title: 'Sign Up' }
+      default:
+        return { title: 'No Title' }
+    }
   }
 
   _handleChange (fieldName) {
@@ -32,7 +42,7 @@ export default class SessionFormScreen extends React.Component {
     const { dispatch } = this.props.navigation;
 
     return (
-      <View style={styles.container}>
+      <View style={styles.screen}>
         <FormLabel>Username</FormLabel>
         <FormInput onChangeText={this._handleChange('username')}/>
         <FormValidationMessage>Error message</FormValidationMessage>

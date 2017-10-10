@@ -6,7 +6,7 @@ import styles from '../styles/styles'
 export default class RecentChatsScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.screen}>
         <Text>List of recent chats</Text>
         <Button
           onPress={() => this.props.navigation.navigate('Chat', { user: 'Lucy' })}

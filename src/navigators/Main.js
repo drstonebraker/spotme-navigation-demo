@@ -2,11 +2,11 @@ import React from 'react'
 import { StackNavigator } from 'react-navigation';
 
 import SessionFormScreen from '../screens/SessionForm'
-import HomeScreen from '../screens/Home'
+import HomeConditionalScreen from '../screens/HomeConditional'
 
 
 const MainNavigator = StackNavigator({
-  Home: { screen: HomeScreen },
+  Home: { screen: HomeConditionalScreen },
   SessionForm: { screen: SessionFormScreen },
 })
 
