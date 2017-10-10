@@ -3,7 +3,7 @@ import { View, Button } from 'react-native'
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import { NavigationActions } from 'react-navigation'
 
-import styles from '../../styles/styles'
+import styles from '../../../styles/styles'
 
 export default class SessionFormScreen extends React.Component {
   constructor(props) {
@@ -49,7 +49,7 @@ export default class SessionFormScreen extends React.Component {
         <FormLabel>Password</FormLabel>
         <FormInput onChangeText={this._handleChange('password')}/>
         <FormValidationMessage>Error message</FormValidationMessage>
-        {/* Button onPress should be a function mapped from a thunk action creator */}
+        {/* TODO Button onPress should be a function mapped from a thunk action creator */}
         <Button
           onPress={() => dispatch(resetNavigateHome)}
           title='Submit' />

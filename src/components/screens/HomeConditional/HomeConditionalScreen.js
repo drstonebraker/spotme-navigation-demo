@@ -1,7 +1,7 @@
 import React from 'react'
 
-import HomeScreen from './Home'
-import WelcomeScreen from './Welcome'
+import HomeScreen from '../Home/HomeScreen'
+import WelcomeScreen from '../Welcome/WelcomeScreen'
 
 
 export default class HomeConditionalScreen extends React.Component {
@@ -12,7 +12,7 @@ export default class HomeConditionalScreen extends React.Component {
   }
 
   static navigationOptions = {
-    title: false ? 'Home' : 'Welcome', // temp setting while awaiting auth & redux
+    title: false ? 'Home' : 'Welcome', // TODO temp setting while awaiting auth & redux
     // title: this.props.isLoggedIn ? 'Home' : 'Welcome',
   };
 
