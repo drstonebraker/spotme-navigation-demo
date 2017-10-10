@@ -1,12 +1,18 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
+import HomeScreen from './src/screens/Home'
 import SessionFormScreen from './src/screens/SessionForm'
-import WelcomeScreen from './src/screens/Welcome'
 
-const App = StackNavigator({
-  Home: { screen: WelcomeScreen },
+export const MainNavigator = StackNavigator({
+  Home: { screen: HomeScreen },
   SessionForm: { screen: SessionFormScreen },
 })
 
-export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <MainNavigator />
+    )
+  }
+}
